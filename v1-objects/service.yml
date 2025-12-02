@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: my-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80          #these is for external world
+      targetPort: 80     #these is port of pod
