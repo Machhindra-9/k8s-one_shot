@@ -1,4 +1,4 @@
-✅ Commands & Simple Explanations
+✅ StatefulSet implemented by using mysql and volume concept command as below
 1. vim statefulset.yml
 
 Open or edit the StatefulSet YAML file.
