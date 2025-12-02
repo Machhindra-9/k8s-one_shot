@@ -1,0 +1,77 @@
+✅ Commands & Simple Explanations
+1. vim statefulset.yml
+
+Open or edit the StatefulSet YAML file.
+
+2. vim namespace.yml
+
+Open or edit the Namespace YAML file.
+
+3. kubectl apply -f namespace.yml
+
+Create the namespace defined in namespace.yml.
+
+4. kubectl get ns
+
+List all namespaces in the cluster.
+
+5. kubectl get mysql
+
+Invalid command — mysql is not a Kubernetes resource.
+
+6. kubectl get ns mysql
+
+Show the details of the mysql namespace.
+
+7. vim service.yml
+
+Open or edit the Service YAML.
+
+8. kubectl apply -f service.yml
+
+Create the Service for the StatefulSet (usually a headless service).
+
+9. kubectl apply -f statefulset.yml
+
+Create/Update the StatefulSet from the YAML.
+
+10. cat statefulset.yml
+
+Print contents of the file (to verify changes).
+
+11. cat > statefulset.yml
+
+Overwrite the file with new content (until Ctrl+D).
+
+12. kubectl get all -n nginx
+
+Show all Kubernetes objects in the nginx namespace.
+
+13. kubectl get all -n mysql
+
+Show all objects in the mysql namespace (pods, svc, replicaset, etc).
+
+14. watch kubectl get all -n mysql
+
+Continuously watch all resources in the mysql namespace (auto-refresh).
+
+15. kubectl get pod -n mysql
+
+List all pods in the mysql namespace.
+
+16. kubectl exec -it mysql-statefulset-0 -n mysql -- bash
+
+Enter the MySQL pod's shell (bash) of the first replica (ordinal 0).
+
+17. kubectl delete pod mysql-statefulset-0 -n mysql
+
+Manually delete a pod.
+→ StatefulSet will recreate it automatically.
+
+18. kubectl get all -n mysql
+
+Check resources again.
+
+19. history
+
+Show command history.
