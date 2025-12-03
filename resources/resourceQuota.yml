@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: nginx-team
+  namespace: nginx-app
+spec:
+  hard:
+    limits.cpu: 1
+    limits.memory: 1Gi
+    requests.cpu: 1
+    requests.memory: 1Gi
+    pods: 2
